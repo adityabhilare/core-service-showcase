@@ -1,10 +1,8 @@
 import { Button } from '@/components/ui/button';
 import { Phone, Star, Users, CheckCircle, Clock } from 'lucide-react';
 import heroTechnician from '@/assets/hero-technician.jpg';
-
 const Hero = () => {
-  return (
-    <section id="home" className="relative min-h-screen flex items-center hero-gradient overflow-hidden">
+  return <section id="home" className="relative min-h-screen flex items-center hero-gradient overflow-hidden">
       {/* Background Pattern */}
       <div className="absolute inset-0 opacity-10">
         <div className="absolute inset-0 bg-gradient-to-r from-transparent via-primary/20 to-transparent transform rotate-12 scale-150"></div>
@@ -15,25 +13,19 @@ const Hero = () => {
           {/* Left Content */}
           <div className="text-white space-y-8">
             <div className="space-y-6">
-              <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight">
+              <h1 className="text-4xl md:text-5xl leading-tight font-bold text-slate-50 text-left lg:text-7xl mx-px px-[12px] py-[55px] my-[20px]">
                 Your Go-To{' '}
-                <span className="text-coral relative">
+                <span className="text-coral relative text-6xl my-0">
                   Electrical
-                  <div className="absolute -bottom-2 left-0 w-full h-1 bg-coral/50 rounded"></div>
+                  
                 </span>
                 <br />
                 & Mechanical Services
               </h1>
               
-              <p className="text-xl md:text-2xl text-navy-foreground/90 leading-relaxed">
-                Reliable Electrical & Mechanical Solutions for Homes & Businesses
-              </p>
+              <p className="text-xl leading-relaxed mx-[20px] text-slate-50 text-center md:text-3xl px-[5px] my-[2px] font-light py-[5px]">Tecno Brother :  Your trusted partner in electrical and mechanical solutions.</p>
               
-              <p className="text-lg text-navy-foreground/80 max-w-2xl">
-                Licensed and insured professionals providing 24/7 emergency service, 
-                free quotes, and same-day service. Your trusted partner for all electrical 
-                and mechanical needs.
-              </p>
+              <p className="text-navy-foreground/80 max-w-2xl text-lg text-center font-medium px-[2px] py-[5px] my-[2px] mx-[2px]">Licensed and insured professionals providing 24/7 emergency service, free quotes, and same-day service. Your trusted partner for all electrical and mechanical needs.</p>
             </div>
 
             {/* CTA Buttons */}
@@ -52,9 +44,7 @@ const Hero = () => {
               <div className="trust-badge px-4 py-3">
                 <div className="flex items-center space-x-2">
                   <div className="flex">
-                    {[...Array(5)].map((_, i) => (
-                      <Star key={i} className="w-4 h-4 fill-yellow-400 text-yellow-400" />
-                    ))}
+                    {[...Array(5)].map((_, i) => <Star key={i} className="w-4 h-4 fill-yellow-400 text-yellow-400" />)}
                   </div>
                   <div className="text-sm">
                     <div className="font-semibold text-foreground">Excellent</div>
@@ -88,23 +78,10 @@ const Hero = () => {
           {/* Right Image */}
           <div className="relative">
             <div className="relative">
-              <img
-                src={heroTechnician}
-                alt="Professional electrical technician"
-                className="w-full max-w-lg mx-auto rounded-2xl shadow-2xl"
-                loading="eager"
-              />
+              <img src={heroTechnician} alt="Professional electrical technician" className="w-full max-w-lg mx-auto rounded-2xl shadow-2xl" loading="eager" />
               
               {/* Floating Cards */}
-              <div className="absolute top-8 -left-4 lg:left-8 floating-card p-4 max-w-xs">
-                <div className="flex items-center space-x-3">
-                  <CheckCircle className="w-8 h-8 text-success flex-shrink-0" />
-                  <div>
-                    <div className="font-semibold text-foreground">Licensed & Insured</div>
-                    <div className="text-sm text-muted-foreground">Fully certified professionals</div>
-                  </div>
-                </div>
-              </div>
+              
 
               <div className="absolute bottom-8 -right-4 lg:right-8 floating-card p-4 max-w-xs">
                 <div className="flex items-center space-x-3">
@@ -121,8 +98,6 @@ const Hero = () => {
           </div>
         </div>
       </div>
-    </section>
-  );
+    </section>;
 };
-
 export default Hero;
